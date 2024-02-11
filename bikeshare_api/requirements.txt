@@ -1,0 +1,16 @@
+uvicorn
+fastapi
+pydantic
+requests
+
+# repo maintenance tooling
+#black>=22.0.0,<23.0.0
+#flake8>=3.9.0,<3.10.0
+#mypy==0.812
+#isort==5.8.0
+
+# After uploding your package in PyPi use the given below
+#titanic-model==0.0.1
+
+# If locally copyied whl file inside titanic_model-api then use given below
+bikeshare_model-0.0.1-py3-none-any.whl

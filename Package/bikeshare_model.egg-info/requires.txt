@@ -1,0 +1,16 @@
+numpy
+pandas
+matplotlib
+matplotlib-inline
+matplotlib-venn
+scikit-image
+scikit-learn
+pydantic
+strictyaml
+ruamel.yaml
+ruamel.yaml.clib
+joblib
+build
+black
+pylint
+pytest
