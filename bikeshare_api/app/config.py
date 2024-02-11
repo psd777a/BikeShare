@@ -4,11 +4,12 @@ from typing import List
 from pydantic import AnyHttpUrl
 from pydantic_settings import BaseSettings
 
+
 class Settings(BaseSettings):
     API_V1_STR: str = "/api/v1"
 
     # Meta
- 
+
     # BACKEND_CORS_ORIGINS is a comma-separated list of origins
     # e.g: http://localhost,http://localhost:4200,http://localhost:3000
     BACKEND_CORS_ORIGINS: List[AnyHttpUrl] = [
@@ -22,5 +23,6 @@ class Settings(BaseSettings):
 
     class Config:
         case_sensitive = True
+
 
 settings = Settings()

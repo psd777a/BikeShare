@@ -33,7 +33,7 @@ async def predict(input_data: schemas.MultipleDataInputs) -> Any:
     """
 
     input_df = pd.DataFrame(jsonable_encoder(input_data.inputs))
-    
+
     results = make_prediction(input_data=input_df.replace({np.nan: None}))
 
     if results["errors"] is not None:
