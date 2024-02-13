@@ -6,7 +6,7 @@ format:
 	black ./
 
 lint:
-	pylint --disable=R,C ./Package/bikeshare_model \
+	pylint --disable=R,C ./Package/bikeshare_model
 	pylint --disable=R,C ./bikeshare_api/app
 
 test:
