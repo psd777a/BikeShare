@@ -18,12 +18,12 @@ jobs:
       uses: actions/setup-python@v4
       with:
         python-version: ${{matrix.python-version}}
-    - name: Format
-      run: | 
-        make format
     - name: Install Depemdencies
       run: | 
         make install
+    - name: Format
+      run: | 
+        make format
     - name: Lint with Pylint
       run: | 
         make lint
