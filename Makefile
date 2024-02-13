@@ -6,7 +6,8 @@ format:
 	black ./
 
 lint:
-	pylint --disable=R,C ./
+	pylint --disable=R,C ./Package/bikeshare_model \
+	pylint --disable=R,C ./bikeshare_api/app
 
 test:
 	python -m pytest Package/tests/test_*.py
