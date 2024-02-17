@@ -55,6 +55,7 @@ class WeathersitImputer(BaseEstimator, TransformerMixin):
     def __init__(self, variable: str):
         # YOUR CODE HERE
         self.variable = variable
+        self.fill : str
 
     def fit(self, X: pd.DataFrame, y: pd.Series = None):
         # YOUR CODE HERE
@@ -102,6 +103,8 @@ class OutlierHandler(BaseEstimator, TransformerMixin):
         if not isinstance(variable, str):
             raise ValueError("variables should be a str")
         self.variable = variable
+        self.lb : float
+        self.ub : float
 
     def fit(self, X: pd.DataFrame, y=None):
         # YOUR CODE HERE
