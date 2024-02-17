@@ -6,7 +6,6 @@ parent, root = file.parent, file.parents[1]
 sys.path.append(str(root))
 
 import typing as t
-import re
 import joblib
 import pandas as pd
 from sklearn.pipeline import Pipeline
