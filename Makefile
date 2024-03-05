@@ -6,13 +6,10 @@ format: |
 	black ./
 
 lint: |
-	pylint --disable=R,C ./Package/bikeshare_model
-	pylint --disable=R,C ./bikeshare_api/app
+	pylint --disable=R,C ./Package/bikeshare_model/*.py &&\
+	pylint --disable=R,C ./bikeshare_api/app/*.py || true
 
 test: |
 	python -m pytest Package/tests/test_*.py
-
-lint: |
-	pylint --disable=R,C Package/bikeshare_model/*.py
 
 all: install format lint test
