@@ -21,20 +21,12 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install Depemdencies
+    - name: Install Depemdencies Format Lint Test
       run: | 
-        make install
+        make all
     
-    - name: Format
+    - name: Build Code to Package
       run: | 
-        make format
-    
-    - name: test with Pytest
-      run: | 
-        make test
-
-    - name: lint with Pytest
-      run: | 
-        make lint
+        make build
     
       
