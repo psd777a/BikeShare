@@ -14,7 +14,9 @@ test: |
 
 build: |
 	python3 Package/bikeshare_model/train_pipeline.py &&\
+		cd Package &&\
 	   		python3 -m build &&\
-				cp dist/bikeshare_model-0.0.1-py3-none-any.whl  bikeshare_model_api
+				cd .. &&\
+				cp Package/dist/bikeshare_model-0.0.1-py3-none-any.whl  bikeshare_model_api
 
 all: install format lint test
