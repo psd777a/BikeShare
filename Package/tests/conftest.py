@@ -24,7 +24,7 @@ def sample_data_pull():
 
     data.sort_values(by=config.modelConfig.split_var, inplace=True, ascending=True)
     data.reset_index(drop=True, inplace=True)
-    _, test = np.split(data, [int((1 - config.modelConfig.test_size) * len(data))])
+    test = data.loc[int(0.8*len(data)):,:]
     test.reset_index(drop=True, inplace=True)
     test_X, test_y = (
         test.drop([config.modelConfig.target], axis=1),
