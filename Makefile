@@ -17,6 +17,6 @@ build: |
 		cd Package &&\
 	   		python3 -m build &&\
 				cd .. &&\
-				cp Package/dist/bikeshare_model-0.0.1-py3-none-any.whl  bikeshare_model_api
+				cp Package/dist/bikeshare_model-0.0.1-py3-none-any.whl  bikeshare_api
 
 all: install format lint test
