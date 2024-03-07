@@ -1,4 +1,4 @@
-name: Learning GitHub Actions
+name: CI Pipeline
 
 on:
   push:
